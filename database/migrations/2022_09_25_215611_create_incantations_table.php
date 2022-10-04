@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('incantations', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
             $table->string('name');
             $table->string('image');
             $table->string('description');
@@ -24,6 +23,8 @@ return new class extends Migration
             $table->integer('slots');
             $table->string('effects');
             $table->json('requires');
+            $table->timestamps();
+
         });
     }
 

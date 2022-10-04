@@ -15,12 +15,12 @@ return new class extends Migration
     {
         Schema::create('creatures', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
             $table->string('name');
             $table->string('image');
             $table->string('description');
             $table->string('location');
             $table->json('drops');
+            $table->timestamps();
         });
     }
 

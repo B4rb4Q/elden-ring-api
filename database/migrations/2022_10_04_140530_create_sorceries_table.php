@@ -13,12 +13,16 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('initial_classes', function (Blueprint $table) {
+        Schema::create('sorceries', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('image');
             $table->string('description');
-            $table->json('stats');
+            $table->string('type');
+            $table->integer('cost');
+            $table->integer('slots');
+            $table->string('effects');
+            $table->json('requires');
             $table->timestamps();
         });
     }
@@ -30,6 +34,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('initial_classes');
+        Schema::dropIfExists('sorceries');
     }
 };

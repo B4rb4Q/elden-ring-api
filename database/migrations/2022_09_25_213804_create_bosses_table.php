@@ -15,13 +15,13 @@ return new class extends Migration
     {
         Schema::create('bosses', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
             $table->string('name');
             $table->string('image');
             $table->string('description');
             $table->string('location');
             $table->json('drops'); //TODO - Add cast to array into model
             $table->string('health_points');
+            $table->timestamps();
         });
     }
 

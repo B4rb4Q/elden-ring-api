@@ -15,12 +15,12 @@ return new class extends Migration
     {
         Schema::create('ashes_of_war', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
             $table->string('name');
             $table->string('image');
             $table->string('description');
             $table->string('affinity');
             $table->string('skill');
+            $table->timestamps();
         });
     }
 
